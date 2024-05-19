@@ -64,7 +64,10 @@ function App() {
   return (
     <section className="flex flex-col items-center justify-center min-h-screen p-4">
       {showConfetti && <Confetti />}
-      <div ref={comp} className="flex flex-col items-center text-center">
+      <div
+        ref={comp}
+        className="flex flex-col items-center text-center overflow-hidden"
+      >
         <h1 id="b-text" className="uppercase font-black text-3xl md:text-5xl">
           Happy Birthday
         </h1>
@@ -84,73 +87,139 @@ function App() {
         </div>
       </div>
       <div className="w-full max-w-screen-lg mt-8">
-        <h1 className="text-xl mb-4">Simi's Gallery</h1>
+        <h1 className="text-xl mb-4 text-center">Simi's Gallery</h1>
         <Swiper
           effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          slidesPerView={1} // Default for mobile
+          lazy={true}
           breakpoints={{
-            640: {
-              slidesPerView: 2,
+            320: {
+              slidesPerView: 1,
+              spaceBetween: 10,
               coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 1,
+              },
+              pagination: false,
+              navigation: false,
+            },
+            480: {
+              slidesPerView: 1.5,
+              spaceBetween: 10,
+              coverflowEffect: {
+                rotate: 0,
                 stretch: 0,
                 depth: 100,
                 modifier: 1.5,
               },
+              pagination: false,
+              navigation: false,
             },
-            768: {
-              slidesPerView: 3,
+            640: {
+              slidesPerView: 2,
+              spaceBetween: 15,
               coverflowEffect: {
+                rotate: 0,
                 stretch: 0,
                 depth: 100,
-                modifier: 2,
+                modifier: 1.5,
               },
+              pagination: false,
+              navigation: false,
+            },
+            768: {
+              slidesPerView: 2.5,
+              spaceBetween: 20,
+              coverflowEffect: {
+                rotate: 0,
+                stretch: 0,
+                depth: 100,
+                modifier: 1.5,
+              },
+              pagination: false,
+              navigation: false,
             },
             1024: {
               slidesPerView: 3,
+              spaceBetween: 30,
               coverflowEffect: {
+                rotate: 0,
                 stretch: 0,
                 depth: 100,
                 modifier: 2.5,
               },
+              pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+              },
+              navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+                clickable: true,
+              },
             },
-          }}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 100,
-            modifier: 2.5,
-          }}
-          pagination={{ el: ".swiper-pagination", clickable: true }}
-          navigation={{
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
-            clickable: true,
           }}
           className="swiper_container"
         >
           <SwiperSlide>
-            <img src={slide_image_1} alt="slide_image" className="w-full" />
+            <img
+              src={slide_image_1}
+              alt="slide_image"
+              className="swiper-lazy w-full"
+            />
+            <div className="swiper-lazy-preloader"></div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide_image_2} alt="slide_image" className="w-full" />
+            <img
+              src={slide_image_2}
+              alt="slide_image"
+              className="swiper-lazy w-full"
+            />
+            <div className="swiper-lazy-preloader"></div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide_image_3} alt="slide_image" className="w-full" />
+            <img
+              src={slide_image_3}
+              alt="slide_image"
+              className="swiper-lazy w-full"
+            />
+            <div className="swiper-lazy-preloader"></div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide_image_4} alt="slide_image" className="w-full" />
+            <img
+              src={slide_image_4}
+              alt="slide_image"
+              className="swiper-lazy w-full"
+            />
+            <div className="swiper-lazy-preloader"></div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide_image_5} alt="slide_image" className="w-full" />
+            <img
+              src={slide_image_5}
+              alt="slide_image"
+              className="swiper-lazy w-full"
+            />
+            <div className="swiper-lazy-preloader"></div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide_image_6} alt="slide_image" className="w-full" />
+            <img
+              src={slide_image_6}
+              alt="slide_image"
+              className="swiper-lazy w-full"
+            />
+            <div className="swiper-lazy-preloader"></div>
           </SwiperSlide>
           <SwiperSlide>
-            <img src={slide_image_7} alt="slide_image" className="w-full" />
+            <img
+              src={slide_image_7}
+              alt="slide_image"
+              className="swiper-lazy w-full"
+            />
+            <div className="swiper-lazy-preloader"></div>
           </SwiperSlide>
 
           <div className="slider-controler">
