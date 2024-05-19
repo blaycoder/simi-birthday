@@ -35,17 +35,20 @@ function App() {
       {
         isMobile: "(max-width: 600px)",
         isDesktop: "(min-width: 768px)",
+        reduceMotion: "(prefers-reduced-motion: no-preference)",
       },
       (context) => {
-        let { isMobile, isDesktop } = context.conditions;
+        let { isMobile, isDesktop, reduceMotion } = context.conditions;
         t1.from("#b-text", {
-          xPercent: isMobile ? "-100" : "-300",
+          xPercent: reduceMotion ? 0 : isMobile ? "-100" : "-300",
           duration: 1.3,
           delay: 0.3,
+          scale: 2,
         })
           .to("#b-text", {
             xPercent: isMobile ? "-20" : "0",
             duration: 0.5,
+            scale: 1,
           })
           .from("#name", {
             opacity: 0,
@@ -87,7 +90,33 @@ function App() {
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          slidesPerView={"auto"}
+          slidesPerView={1} // Default for mobile
+          breakpoints={{
+            640: {
+              slidesPerView: 2,
+              coverflowEffect: {
+                stretch: 0,
+                depth: 100,
+                modifier: 1.5,
+              },
+            },
+            768: {
+              slidesPerView: 3,
+              coverflowEffect: {
+                stretch: 0,
+                depth: 100,
+                modifier: 2,
+              },
+            },
+            1024: {
+              slidesPerView: 3,
+              coverflowEffect: {
+                stretch: 0,
+                depth: 100,
+                modifier: 2.5,
+              },
+            },
+          }}
           coverflowEffect={{
             rotate: 0,
             stretch: 0,
