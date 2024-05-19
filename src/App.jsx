@@ -6,6 +6,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import { register } from "swiper/element/bundle";
 register();
 
+import { EffectCoverflow, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -68,15 +69,20 @@ function App() {
         ref={comp}
         className="flex flex-col items-center text-center overflow-hidden"
       >
-        <h1 id="b-text" className="uppercase font-black text-3xl md:text-5xl">
-          Happy Birthday
-        </h1>
-        <p
-          id="name"
-          className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text mt-4"
-        >
-          SIMILEOLUWA
-        </p>
+        <div>
+          <h1
+            id="b-text"
+            className="uppercase font-black text-base md:text-5xl"
+          >
+            Happy Birthday
+          </h1>
+          <p
+            id="name"
+            className="text-2xl md:text-4xl font-bold bg-gradient-to-r from-indigo-500 via-purple-500 to-pink-500 text-transparent bg-clip-text mt-4"
+          >
+            SIMILEOLUWA
+          </p>
+        </div>
         <div className="card mt-4">
           <button
             onClick={handleConfetti}
@@ -93,11 +99,10 @@ function App() {
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          lazy={true}
+          slidesPerView={"auto"}
           breakpoints={{
             320: {
               slidesPerView: 1,
-              spaceBetween: 10,
               coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
@@ -109,7 +114,6 @@ function App() {
             },
             480: {
               slidesPerView: 1.5,
-              spaceBetween: 10,
               coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
@@ -121,7 +125,6 @@ function App() {
             },
             640: {
               slidesPerView: 2,
-              spaceBetween: 15,
               coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
@@ -133,7 +136,6 @@ function App() {
             },
             768: {
               slidesPerView: 2.5,
-              spaceBetween: 20,
               coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
@@ -145,7 +147,6 @@ function App() {
             },
             1024: {
               slidesPerView: 3,
-              spaceBetween: 30,
               coverflowEffect: {
                 rotate: 0,
                 stretch: 0,
