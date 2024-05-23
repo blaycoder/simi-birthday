@@ -59,6 +59,10 @@ function App() {
         )}
       </div>
       <div className="my-24">{introIsDone && <GalleryGrid />}</div>
+
+      <p>
+        Made with ❤
+      </p>
     </section>
   );
 }
