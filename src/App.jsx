@@ -40,23 +40,19 @@ function App() {
   return (
     <section>
       <h1>
-        <span>Happy Birthday, {introTypeEffect}</span>
+        <span>
+          Happy Birthday, <span className="font-black"> {introTypeEffect}</span>
+        </span>
         {/* <Cursor /> */}
       </h1>
       <button disabled={isDisabled} onClick={toggleMessage}>
-       {!showMessage ? 'Show' : 'Hide'} Message
+        {!showMessage ? "Show" : "Hide"} Message
       </button>
 
-      <div>
-        {showMessage && (
-          <p>{mainMsgEffect}</p>
-        )}
+      <div className="p-4">{showMessage && <p>{mainMsgEffect}</p>}</div>
+      <div className="my-24">
+        <GalleryGrid />
       </div>
-
-      <div className="mt-8">
-        <h1 className="text-xl mb-4 text-center">Simi's Gallery</h1>
-      </div>
-      <GalleryGrid/>
     </section>
   );
 }
