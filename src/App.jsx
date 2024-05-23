@@ -2,6 +2,7 @@ import { useState } from "react";
 import "./App.css";
 // import Confetti from "react-confetti";
 import { useTypewriter } from "react-simple-typewriter";
+import GalleryGrid from "./components/GalleryGrid";
 
 function App() {
   const [showMessage, setShowMessage] = useState(false);
@@ -47,7 +48,7 @@ function App() {
         {/* <Cursor /> */}
       </h1>
       <button disabled={isDisabled} onClick={toggleMessage}>
-        Show Message
+       {!showMessage ? 'Show' : 'Hide'} Message
       </button>
 
       <div>
@@ -59,6 +60,7 @@ function App() {
       <div className="mt-8">
         <h1 className="text-xl mb-4 text-center">Simi's Gallery</h1>
       </div>
+      <GalleryGrid/>
     </section>
   );
 }
