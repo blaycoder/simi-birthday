@@ -7,7 +7,17 @@ import Confetti from "react-confetti";
 function App() {
   const [showMessage, setShowMessage] = useState(false);
   const [introTypeEffect, introHelper] = useTypewriter({
-    words: ["My Love", "Sunshine", "Simileoluwa"],
+    words: [
+      "My Love 😍❤",
+      "My Queen ",
+      "Baby Girl 💕",
+      "My Angel",
+      "Darling",
+      "Bae 😙💕",
+      "Wura Mi 😙",
+      "Sunshine 🌝",
+      "Simileoluwa 🎊🎉🎈",
+    ],
     loop: 1,
     typeSpeed: 170,
     delaySpeed: 70,
@@ -25,7 +35,7 @@ function App() {
   return (
     <section>
       <Confetti />
-      <h1 style={{paddingBottom: "10px"}}>
+      <h1 style={{ paddingBottom: "10px" }}>
         <span>
           Happy Birthday, <span className="font-black">{introTypeEffect}</span>
         </span>
@@ -44,7 +54,7 @@ function App() {
             love, and enjoying every moment of it? To my love—my forever muse,
             my greatest adventure, and my sweetest joy. I love you more than
             words can say! May your day be as wonderful and unforgettable as you
-            are.
+            are 💌.
           </p>
         )}
       </div>
