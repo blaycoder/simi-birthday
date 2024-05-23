@@ -25,14 +25,14 @@ function App() {
   return (
     <section>
       <Confetti />
-      <h1>
+      <h1 style={{paddingBottom: "10px"}}>
         <span>
           Happy Birthday, <span className="font-black">{introTypeEffect}</span>
         </span>
         {/* <Cursor /> */}
       </h1>
 
-      <div style={{ marginTop: 24 }}>
+      <div style={{ marginBottom: "24px" }}>
         {showMessage && (
           <p>
             Happy Birthday, my love! I'll give you the world, baby, because
