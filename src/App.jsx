@@ -22,11 +22,7 @@ function App() {
   }
 
   const birthdayWords = [
-    "Happy Birthday, my love!",
-    "I'll give you the world, baby, because you’ve already given me the universe with your magic. Your touch is like a spell, making everything brighter and more beautiful, a touching touch that turns the ordinary into the extraordinary. There's a reason for all of this, and it's you.",
-    "Just imagine! Who would've thought I'd be wrapped around your finger, hopelessly in love, and enjoying every moment of it?",
-    "To my love—my forever muse, my greatest adventure, and my sweetest joy. I love you more than words can say!",
-    "May your day be as wonderful and unforgettable as you are. ",
+    "Happy Birthday, my love!,I'll give you the world, baby, because you’ve already given me the universe with your magic. Your touch is like a spell, making everything brighter and more beautiful, a touching touch that turns the ordinary into the extraordinary. There's a reason for all of this, and it's you., Just imagine! Who would've thought I'd be wrapped around your finger, hopelessly in love, and enjoying every moment of it?,To my love—my forever muse, my greatest adventure, and my sweetest joy. I love you more than words can say!, May your day be as wonderful and unforgettable as you are. ",
   ];
 
   const [mainMsgEffect] = useTypewriter({
